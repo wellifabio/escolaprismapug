@@ -17,5 +17,8 @@ html(lang="pt-br")
                     li Professores
             div(class="container")
                 each turma in turmas
-                    p #{turma.nome}
+                    div(class="card")
+                        p(class="titulo") #{turma.id} - #{turma.abreviacao}
+                        p(class="dados") #{turma.abreviacao}
+                        p(class="dados") #{turma.nome}
         footer
