@@ -16,9 +16,9 @@ html(lang="pt-br")
                     li Alunos
                     li Professores
             div(class="container")
-                each turma in turmas
+                each aluno in alunos
                     div(class="card")
-                        p(class="titulo") #{turma.id} - #{turma.abreviacao}
-                        p(class="dados") #{turma.abreviacao}
-                        p(class="dados") #{turma.nome}
+                        p(class="titulo") #{aluno.ra}
+                        p(class="dados") #{aluno.nome}
+                        p(class="dados") #{aluno.nascimento}
         footer
