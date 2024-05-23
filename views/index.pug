@@ -10,4 +10,12 @@ html(lang="pt-br")
         header
             h1 Escola ACME
         main
+            nav
+                ul
+                    li Turmas
+                    li Alunos
+                    li Professores
+            div(class="container")
+                each turma in turmas
+                    p #{turma.nome}
         footer
