@@ -11,10 +11,9 @@ html(lang="pt-br")
             h1 Escola ACME
         main
             nav
-                ul
-                    li Turmas
-                    li Alunos
-                    li Professores
+                button(onclick="window.location.href='/'") Turmas
+                button(onclick="window.location.href='/aluno'") Alunos
+                button(onclick="window.location.href='/professores'") Professores
             div(class="container")
                 each aluno in alunos
                     div(class="card")
