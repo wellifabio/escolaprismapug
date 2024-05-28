@@ -28,6 +28,8 @@ html(lang="pt-br")
                                 td= professor.id
                                 td= professor.nome
                                 td= professor.especialidade
-                                td Aguardando
+                                td 
+                                    each turma in professor.turmas
+                                        p= turma.turma.abreviacao
 
         footer

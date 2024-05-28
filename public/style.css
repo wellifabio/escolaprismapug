@@ -76,35 +76,22 @@ button:hover{
     color: var(--ultima);
 }
 
-.container{
+form{
+    display: flex;
     width: 100%;
-    height: 100%;
-    max-height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-}
-
-.card{
-    width: 180px;
-    height: 250px;
-    padding: 10px;
-    margin: 10px;
-    background-color: var(--ultima  );
-    border-radius: 5px;
-    border: solid 1px var(--media);
-    box-shadow: 2px 2px 2px var(--media);
-    display: flex;
+    height: 80%;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
-.card p{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+input{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 1px 1px 3px var(--primaria);
+    width: fit-content;
 }
 
 h1{
@@ -136,6 +123,37 @@ td{
     text-align: center;
 }
 
+.container{
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.card{
+    width: 180px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--ultima  );
+    border-radius: 5px;
+    border: solid 1px var(--media);
+    box-shadow: 2px 2px 2px var(--media);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card p{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .modal{
     position: absolute;
     top: 0px;
@@ -148,39 +166,34 @@ td{
     align-items: center;
 }
 
-.form{
+.janela{
     position: relative;
-    top: 100px;
-    width: 50vw;
-    height: 50vh;
+    top: 10vh;
+    width: fit-content;
+    height: fit-content;
+    max-height: 60vh;
     background-color: var(--media);
     box-shadow: 1px 1px 5px var(--primaria);
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
+    overflow-y: auto;
 }
 
-.form div{
+.modalCabecalho{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
-.form div button{
+.modalCabecalho button{
     width: fit-content;
 }
 
-form{
+.grade{
     display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 20px;
-}
-
-input{
-    margin: 20px;
-    padding: 10px;
-    border-radius: 25px;
-    border: none;
-    box-shadow: 1px 1px 3px var(--primaria);
+    grid-template-columns: 30% 70%;
+    align-items: center;
 }
 
 .oculto{
