@@ -254,4 +254,17 @@ td {
         border-radius: 25px;
         padding: 5px;
     }
+    button {
+        width: fit-content;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: var(--media);
+    }
+    .menu button {
+        width: 90%;
+        background-color: var(--ultima  );
+    }
+    .janela{
+        background-color: var(--ultima  );
+    }
 }
