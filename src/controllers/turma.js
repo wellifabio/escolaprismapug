@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
-const iniciar = async (req, res) => {
+const listar = async (req, res) => {
     const turmas = await prisma.turma.findMany({
         select: {
             id: true,
@@ -24,7 +24,7 @@ const iniciar = async (req, res) => {
     res.render('index', { turmas: turmas });
 }
 
-const create = async (req, res) => {
+const criar = async (req, res) => {
     const turma = await prisma.turma.create({
         data: req.body
     });
@@ -32,6 +32,6 @@ const create = async (req, res) => {
 }
 
 module.exports = {
-    iniciar,
-    create
+    listar,
+    criar
 }

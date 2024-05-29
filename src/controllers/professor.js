@@ -1,7 +1,7 @@
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
-const iniciar = async (req, res) => {
+const listar = async (req, res) => {
     const professores = await prisma.professor.findMany({
         select: {
             id: true,
@@ -17,6 +17,17 @@ const iniciar = async (req, res) => {
     res.render('professor', { professores: professores });
 }
 
+const alterar = async (req, res) => {
+    const resultado = await prisma.professor.update({
+        data: req.body,
+        where: {
+            id: Number(req.params.id)
+        }
+    });
+    res.redirect('/professor');
+}
+
 module.exports = {
-    iniciar
+    listar,
+    alterar
 }
